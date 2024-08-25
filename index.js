@@ -1,6 +1,7 @@
 import express, { json } from "express";
 const app = express();
 app.use(json());
+app.use(cors());
 
 app.post("/bfhl", (req, res) => {
   const { data } = req.body;

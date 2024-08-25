@@ -1,7 +1,9 @@
 import express, { json } from "express";
 const app = express();
 app.use(json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://task-frontend-rouge-one.vercel.app',
+}));
 
 app.post("/bfhl", (req, res) => {
   const { data } = req.body;
